@@ -20,7 +20,12 @@ source-repository head
   location:            https://github.com/ScottSedgwick/johnhelp.git
 
 common common-options
-  build-depends:       base ^>= 4.13.0.0
+  build-depends:       base ^>= 4.14.0.0
+                     , bytestring
+                     , data-default
+                     , system-filepath
+                     , text
+                     , xeno
   
   ghc-options:         -Wall
                        -Wcompat
@@ -42,7 +47,8 @@ common common-options
 library
   import:              common-options
   hs-source-dirs:      src
-  exposed-modules:     Johnhelp
+  exposed-modules:     XliffXeno
+  other-modules:       Parser
 
 executable johnhelp
   import:              common-options

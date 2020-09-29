@@ -1,7 +1,4 @@
 module Main (main) where
 
-import Johnhelp (someFunc)
-
-
 main :: IO ()
-main = someFunc
+main = putStrLn "Nothing to see here."
